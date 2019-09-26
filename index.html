@@ -1,8 +1,19 @@
 <html>
 <title></title>
 <body>
-<h1>我丢？<h1>
-<p>我的学号是<span id="studentnumber">18002090113</span></p>
-<img src="matrix.png">
+<h1>我的名字是<span id="myname"><h1>
+<p>我的学号是<span id="mynumber"></span></p>
+<script src="jquery-3.4.1.js"></script>
+<script>
+$(function(){
+    $.get("./data.json",function(result){
+        $("#myname").text(result.myname);
+        $("#mynumber").text(result.mynumber);
+    });
+
+})
+</script>
+<img id="logo" src= "Penguins.jpg" style="border-radius:50px"/>
+<img src="matrix.png"/>
 </body>
 </html>
